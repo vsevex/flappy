@@ -1,3 +1,4 @@
+import background from "../../public/assets/background.png";
 import { useState, useEffect, useRef } from "react";
 import Ground from "../components/Ground";
 
@@ -45,7 +46,11 @@ const Game = () => {
       style={{
         overflow: "hidden",
         height: "100vh",
-        backgroundColor: "#f0f0f0",
+        backgroundColor: "#121212",
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover",
+        // backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
         position: "relative",
       }}
     >
