@@ -6,9 +6,9 @@ const Ground = () => {
         bottom: "0",
         left: "0",
         width: "100%",
-        height: "60px",
-        backgroundColor: "#DEB887",
-        borderTop: "5px solid #8B4513",
+        height: "50px",
+        backgroundColor: "#2E2E2E",
+        borderTop: "15px solid #8B4513",
       }}
     ></div>
   );
