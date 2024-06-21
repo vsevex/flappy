@@ -16,14 +16,16 @@ const Game = () => {
   useEffect(() => {
     if (isRunning) {
       const pipeInterval = setInterval(() => {
+        const topHeight =
+          Math.random() * (window.innerHeight - pipeGap - 200) + 50;
+        const bottomHeight = window.innerHeight - topHeight - pipeGap;
+
         setPipes((pipes) => [
           ...pipes,
           {
             left: window.innerWidth,
-            topHeight:
-              Math.random() * (window.innerHeight - pipeGap - 200) + 50,
-            bottomHeight:
-              Math.random() * (window.innerHeight - pipeGap - 200) + 50,
+            topHeight,
+            bottomHeight,
           },
         ]);
       }, 2000);
@@ -77,6 +79,7 @@ const Game = () => {
       style={{
         overflow: "hidden",
         height: "100vh",
+        width: "100vw",
         backgroundColor: "#121212",
         backgroundImage: `url(${background})`,
         backgroundSize: "cover",
@@ -101,7 +104,7 @@ const Game = () => {
         <Pipe
           key={index}
           topHeight={pipe.topHeight}
-          bottomHeight={window.innerHeight - pipeGap - pipe.topHeight}
+          bottomHeight={pipe.bottomHeight}
           left={pipe.left}
         ></Pipe>
       ))}
