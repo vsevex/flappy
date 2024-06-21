@@ -18,7 +18,7 @@ const Pipe = ({ topHeight, bottomHeight, left }) => {
       <div
         style={{
           position: "absolute",
-          top: "0",
+          bottom: "0",
           left: `${left}px`,
           width: `${pipeWidth}px`,
           height: `${bottomHeight}px`,
